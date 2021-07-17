@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
 .app{
  display:flex;
  height:100vh;
- background-color: #020230;
+ background-color: black;
+ /*background-color: #020230;*/
  color:white;
 }
 .app_left{
  width:75%;
- background:linear-gradient(
+/* background:linear-gradient(
   to bottom,rgba(0,0,0,0),#221717
- ), url(./assets/backgroundImg.jpg);
+ ), url(./assets/backgroundImg.jpg);*/
+ background-color: rgb(180, 180, 175);
  background-position: center;
  background-size: cover;
  display:flex;
@@ -18,12 +21,31 @@
  height:50%;
  position:relative;
 }
+.appLeft_header{
+ display: flex;
+ align-items: center;
+ position:absolute;
+ top:40px;
+ left:300px;
+}
+.appLeft_spanOne ,.appLeft_spanTwo{
+ font-family: 'Crimson Text', serif;
+ font-size:100px;
+ font-weight:900;
+ text-transform: uppercase;
+}
+.appLeft_spanOne{
+ color:cyan;
+}
+.appLeft_spanTwo{
+ color:black;
+}
 .app_timer{
  width:70px;
  height:70px;
  border-radius:50%;
  border:5px solid white;
- background-color: blue;
+ background-color: rgb(0, 225, 255);
  display:flex;
  justify-content: center;
  align-items: center;
@@ -63,7 +85,7 @@ height:50%;
 font-size:18px;
 font-weight:100;
 margin-right:20px;
-color:rgb(8, 177, 255);
+color:white;
 }
 .moneyList_amount{
 font-size:20px;

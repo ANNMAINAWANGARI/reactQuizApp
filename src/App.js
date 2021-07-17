@@ -20,6 +20,12 @@ function App() {
     <div className="app">
      <div className='app_left'>
        <div className='appLeft_top'>
+         <div className='appLeft_header'>
+           <span className='appLeft_spanOne'>QUIZ</span>
+           <span className='appLeft_spanTwo'>
+            TIME
+           </span>
+         </div>
          <div className='app_timer'>30</div>
        </div>
        <div className='appLeft_bottom'>
