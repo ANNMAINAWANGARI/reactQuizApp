@@ -1,8 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Trivia from './components/Trivia'
 import './App.css';
 function App() {
-  const [questionNum,setQuestionNum]=useState(5);
+  const [questionNum,setQuestionNum]=useState(1);
+  const [stop,setStop]=useState(false);
+  const [earned,setEarned]=useState('$ 0')
   const data =[
     {
       id:1,
@@ -78,21 +80,24 @@ function App() {
     {id:10,amount:'$ 1000000000000'}
     ,
   ].reverse();
+  useEffect(()=>{
+  questionNum >1 &&
+  setEarned(
+    cash.find((m)=>m.id ===questionNum-1).amount
+  )
+  },[cash,questionNum])
   return (
     <div className="app">
      <div className='app_left'>
+       {stop? <h1 className='endText'>You earned {earned}</h1> :(
+      <>
        <div className='appLeft_top'>
-         <div className='appLeft_header'>
-           <span className='appLeft_spanOne'>QUIZ</span>
-           <span className='appLeft_spanTwo'>
-            TIME
-           </span>
-         </div>
          <div className='app_timer'>30</div>
        </div>
        <div className='appLeft_bottom'>
-         <Trivia/>
+         <Trivia data={data}setStop={setStop}setQuestionNum={setQuestionNum}questionNum={questionNum}/>
        </div>
+       </>)}
      </div>
      <div className='app_right'>
        <ul className='moneyList'>
