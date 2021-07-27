@@ -1,91 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap');
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box;
+ scrollbar-width: thin;
+}
+::-webkit-scrollbar{
+ width:8px;
+ background-color: grey;
+}
+a{
+ text-decoration: none;
+ color:inherit;
+}
 .app{
- display:flex;
- height:100vh;
- background-color: black;
- color:white;
-}
-.endText{
-position:relative;
-top:0;
-left:0;
-bottom:0;
-right:0;
-margin:auto;
-}
-.app_left{
- width:75%;
- background-color: rgb(180, 180, 175);
- background-position: center;
- background-size: cover;
- display:flex;
- flex-direction: column;
-}
-.appLeft_top{
- height:50%;
- position:relative;
-}
-
-.appLeft_spanOne ,.appLeft_spanTwo{
- font-family: 'Crimson Text', serif;
- font-size:100px;
- font-weight:900;
- text-transform: uppercase;
-}
-.appLeft_spanOne{
- color:rgb(24, 52, 143);
-}
-.appLeft_spanTwo{
- color:black;
-}
-.app_timer{
- width:70px;
- height:70px;
- border-radius:50%;
- border:5px solid white;
- background-color: rgb(0, 225, 255);
- display:flex;
- justify-content: center;
- align-items: center;
- font-size:30px;
- color:black;
- font-weight:800;
- position:absolute;
- bottom:10px;
- left:90px;
-}
-.appLeft_bottom{
-height:50%;
-}
-
-.app_right{
- width:25%;
- display:flex;
- align-items: center;
- justify-content: center;
-}
-.moneyList{
- list-style:none;
+ min-height:100vh;
  width:100%;
- padding:20px;
-}
-.moneyList_item{
- display:flex;
- align-items: center;
- margin-bottom: 10px;
- padding:10px;
-}
-.moneyList_item.active{
- background-color: teal;
- border-radius:5px;
-}
-.moneyList_number{
-font-size:18px;
-font-weight:100;
-margin-right:20px;
-color:white;
-}
-.moneyList_amount{
-font-size:20px;
-font-weight:300;
+ background-color: white;
+ overflow-y: hidden;
 }
