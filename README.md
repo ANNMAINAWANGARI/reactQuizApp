@@ -6,3 +6,4 @@ Technologies used:
 > React,
 >Materia-UI,
 >Trivia API.
+https://reacttriviaapp.netlify.app/
